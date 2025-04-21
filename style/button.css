@@ -1,0 +1,346 @@
+/* Оригинальные стили */
+/* Кнопка онлайн-записи */
+.booking-button {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--button-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    animation: buttonPulse 2s infinite; /* Добавлена анимация пульсации самой кнопки */
+}
+
+.booking-button:hover {
+    background-color: var(--button-hover);
+    transform: scale(1.05);
+    animation: none; /* Отключаем пульсацию при наведении */
+}
+
+.booking-button:active {
+    background-color: var(--button-active);
+    transform: scale(0.95);
+}
+
+.booking-button-text {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.booking-button::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    border: 2px solid var(--button-color);
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+}
+
+/* Новая анимация для пульсации самой кнопки */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 4px 20px rgba(185, 178, 204, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Боковая панель для записи */
+.booking-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    background-color: var(--sidebar-bg);
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.booking-sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-title {
+    font-size: 24px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s;
+}
+
+.close-sidebar:hover {
+    transform: rotate(90deg);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--button-color);
+    outline: none;
+}
+
+.form-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+}
+
+.submit-btn {
+    background-color: var(--button-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: var(--button-hover);
+}
+
+/* Затемнение фона при открытии сайдбара */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Новые стили для контактной информации и социальных иконок */
+.contact-info {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: var(--button-color);
+}
+
+.contact-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.phone-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0.5 0.5 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z'/%3E%3C/svg%3E");
+}
+
+.email-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z'/%3E%3Cpolyline points='22,6 12,13 2,6'/%3E%3C/svg%3E");
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, background-color 0.3s;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    background-color: #e8e8e8;
+}
+
+.vk {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.785 16.241C5.46002 16.241 1.10602 10.856 0.999023 2.662H4.13302C4.20402 8.788 7.05702 11.409 9.29302 11.919V2.662H12.253V7.869C14.454 7.637 16.764 5.2 17.544 2.662H20.504C19.924 5.874 17.427 8.311 15.658 9.357C17.427 10.202 20.263 12.341 21.295 16.241H18.061C17.235 13.763 15.118 11.776 12.253 11.501V16.241H12.785Z' fill='%234C75A3'/%3E%3C/svg%3E");
+}
+
+.instagram {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z' fill='%23E4405F'/%3E%3C/svg%3E");
+}
+
+.facebook {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z' fill='%231877F2'/%3E%3C/svg%3E");
+}
+
+.telegram {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z' fill='%2327A6E5'/%3E%3C/svg%3E");
+}
+
+.whatsapp {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.4054 3.5875C18.1607 1.3425 15.1714 0.0975 11.9946 0.09C5.4375 0.09 0.0982143 5.43 0.09375 11.9925C0.0923214 14.1375 0.6375 16.2225 1.67143 18.0675L0 24.09L6.15 22.4475C7.93393 23.3925 9.9375 23.895 11.9839 23.8963H11.9946C18.5464 23.8963 23.8875 18.555 23.8929 11.9925C23.8982 8.82 22.65 5.8325 20.4054 3.5875ZM11.9946 21.8775H11.9857C10.1357 21.8763 8.32232 21.3975 6.72321 20.49L6.37232 20.2875L2.75893 21.2475L3.73393 17.715L3.51161 17.3513C2.51786 15.69 2.00893 13.8675 2.00893 11.9925C2.01429 6.5475 6.4875 2.1375 12 2.1375C14.6411 2.1375 17.1161 3.165 18.9804 5.0325C20.8446 6.9 21.8679 9.375 21.8643 11.9913C21.8589 17.4375 17.3857 21.8775 11.9946 21.8775ZM17.4161 14.4863C17.1214 14.3388 15.6536 13.6125 15.3804 13.5113C15.1071 13.41 14.9036 13.3613 14.7 13.6575C14.4964 13.9538 13.9179 14.6325 13.7357 14.8363C13.5536 15.0413 13.3714 15.0638 13.0768 14.9163C12.7821 14.7688 11.8179 14.4525 10.6821 13.4363C9.79821 12.6488 9.20357 11.6775 9.02143 11.3813C8.83929 11.085 9.00268 10.9163 9.15804 10.7625C9.29732 10.6238 9.46607 10.4025 9.62143 10.2188C9.77679 10.035 9.825 9.9 9.92679 9.6975C10.0286 9.4913 9.97679 9.3075 9.90268 9.16C9.82857 9.0125 9.23571 7.5413 8.98214 6.945C8.73214 6.3638 8.48036 6.4425 8.28929 6.4313C8.10714 6.42 7.90357 6.4163 7.7 6.4163C7.49643 6.4163 7.175 6.4913 6.90179 6.7875C6.62857 7.0838 5.85179 7.8113 5.85179 9.2825C5.85179 10.7538 6.92679 12.1763 7.08214 12.3825C7.2375 12.5888 9.19821 15.6263 12.2143 16.9163C12.9107 17.2163 13.4536 17.4 13.8786 17.5388C14.5839 17.7638 15.225 17.7338 15.7339 17.6588C16.3018 17.5738 17.5125 16.935 17.7661 16.2413C18.0196 15.5475 18.0196 14.9513 17.9454 14.835C17.8714 14.7188 17.6679 14.6513 17.4161 14.5038V14.4863Z' fill='%2325D366'/%3E%3C/svg%3E");
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .booking-button {
+        width: 80px;
+        height: 80px;
+        right: 15px;
+        bottom: 15px;
+    }
+    
+    .booking-button-text {
+        font-size: 12px;
+    }
+    
+    .booking-sidebar {
+        max-width: 100%;
+    }
+    
+    .social-icons {
+        gap: 10px;
+    }
+    
+    .social-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-button {
+        width: 70px;
+        height: 70px;
+        right: 10px;
+        bottom: 10px;
+    }
+    
+    .booking-button-text {
+        font-size: 11px;
+    }
+    
+    .social-icons {
+        gap: 8px;
+    }
+    
+    .social-icon {
+        width: 30px;
+        height: 30px;
+    }
+}

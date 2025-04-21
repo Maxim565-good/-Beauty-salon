@@ -1,0 +1,184 @@
+.price-list {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  }
+  
+  .logo-container {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #fff;
+    width: 100%;
+  }
+  
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #a097c4;
+    margin: 0 auto;
+    letter-spacing: 2px;
+  }
+  
+  .price-category {
+    margin-bottom: 0;
+    width: 100%;
+  }
+  
+  .category-header {
+    background-color: #a097c4;
+    color: white;
+    padding: 15px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 50px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    padding-left: 100px;
+  }
+  
+  .category-header:hover {
+    background-color: #f0eef7;
+    color: #333;
+  }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  
+  .category-header:hover .arrow {
+    border-color: #333;
+  }
+
+  .arrow.up {
+    transform: rotate(-135deg);
+  }
+  
+  .category-content {
+    background-color: white;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    width: 100%;
+  }
+  
+  .category-content.active {
+    max-height: 1000px;
+  }
+  
+  .subcategory-header {
+    background-color: #f0eef7;
+    color: #a097c4;
+    padding: 12px 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .price-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 30px;
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+    width: 100%;
+  }
+  
+  .price-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .price-name {
+    flex: 2;
+    font-weight: 300;
+  }
+  
+  .price-cost {
+    flex: 1;
+    text-align: right;
+    font-weight: 500;
+    color: #a097c4;
+  }
+  
+  .price-header {
+    background-color: #a097c4;
+    color: white;
+    padding-top: 300px;
+    padding-bottom: 80px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+    font-weight: 300;
+    width: 100%;
+  }
+  
+  /* Медиа-запросы для адаптивности */
+  @media screen and (max-width: 768px) {
+    .category-header {
+      font-size: 22px;
+      padding: 12px 16px;
+    }
+    
+    .subcategory-header {
+      font-size: 20px;
+    }
+    
+    .price-item {
+      padding: 12px 20px;
+    }
+    
+    .logo {
+      font-size: 28px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .category-header {
+      font-size: 18px;
+      padding: 10px 12px;
+    }
+    
+    .subcategory-header {
+      font-size: 16px;
+    }
+    
+    .price-item {
+      padding: 10px 15px;
+      flex-direction: column;
+    }
+    
+    .price-name {
+      margin-bottom: 5px;
+    }
+    
+    .price-cost {
+      text-align: left;
+    }
+    
+    .logo {
+      font-size: 24px;
+    }
+    
+    .arrow {
+      padding: 3px;
+    }
+  }

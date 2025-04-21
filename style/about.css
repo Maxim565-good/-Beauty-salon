@@ -1,0 +1,271 @@
+.mission-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--black);
+    padding: 40px 0;
+}
+
+/* Floating objects background */
+.floating-objects-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+/* Floating object style - MODIFIED: sizes reduced by half */
+.floating-object {
+    position: absolute;
+    width: 40px; /* reduced from 80px */
+    height: 40px; /* reduced from 80px */
+    background: linear-gradient(135deg, var(--cherry), var(--pink));
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: transform 0.3s ease-out;
+}
+
+/* Shape variations */
+.floating-object.square {
+    border-radius: 0;
+}
+
+.floating-object.triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.floating-object.diamond {
+    transform: rotate(45deg);
+    border-radius: 10%;
+}
+
+/* Size variations - MODIFIED: sizes reduced by half */
+.floating-object.medium {
+    width: 60px; /* reduced from 120px */
+    height: 60px; /* reduced from 120px */
+}
+
+.floating-object.large {
+    width: 80px; /* reduced from 160px */
+    height: 80px; /* reduced from 160px */
+}
+
+/* Color variations */
+.floating-object.pink {
+    background: linear-gradient(135deg, var(--pink), var(--openpink));
+}
+
+.floating-object.cherry {
+    background: linear-gradient(135deg, var(--cherry), var(--gradient-start));
+}
+
+/* Mobile animation */
+@keyframes float {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(10px, 15px) rotate(5deg); }
+    50% { transform: translate(5px, -10px) rotate(-5deg); }
+    75% { transform: translate(-10px, 5px) rotate(3deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.mission-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    width: 90%;
+    padding: clamp(20px, 5vw, 40px);
+    margin: 0 auto;
+}
+
+.mission-frame {
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    border: 2px solid var(--pink);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border-radius: clamp(10px, 2vw, 20px);
+    box-shadow: 
+        0 20px 50px rgba(153, 0, 51, 0.4),
+        inset 0 0 30px rgba(255, 153, 188, 0.3);
+    padding: clamp(25px, 5vw, 50px);
+    text-align: center;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mission-frame:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 60px rgba(153, 0, 51, 0.5),
+        inset 0 0 40px rgba(255, 153, 188, 0.4);
+}
+
+.mission-frame::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        linear-gradient(
+            45deg, 
+            transparent,
+            rgba(255, 207, 219, 0.3),
+            transparent
+        );
+    transform: rotate(-45deg);
+    animation: shine 8s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shine {
+    0% {
+        transform: rotate(-45deg) translateX(-150%);
+    }
+    100% {
+        transform: rotate(-45deg) translateX(150%);
+    }
+}
+
+.mission-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: clamp(15px, 3vw, 25px);
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: clamp(1px, 0.5vw, 3px);
+    color: var(--white);
+    text-shadow: 0 0 15px rgba(255, 158, 188, 0.8);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 15px rgba(255, 158, 188, 0.7);
+    }
+    100% {
+        text-shadow: 0 0 25px rgba(255, 158, 188, 1);
+    }
+}
+
+.mission-subtitle {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin-bottom: clamp(20px, 5vw, 40px);
+    line-height:.1;
+    color: var(--light-gray);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(15px, 3vw, 25px);
+}
+
+.highlight-item {
+    background-color: rgba(255, 207, 219, 0.15);
+    border: 1px solid rgba(255, 158, 188, 0.6);
+    border-radius: clamp(8px, 2vw, 15px);
+    padding: clamp(15px, 3vw, 30px);
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlight-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    background-color: rgba(255, 207, 219, 0.25);
+    box-shadow: 0 10px 25px rgba(153, 0, 51, 0.3);
+}
+
+.highlight-title {
+    margin-bottom: clamp(10px, 2vw, 15px);
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    font-weight: 700;
+    color: var(--openpink);
+    position: relative;
+}
+
+.highlight-description {
+    color: var(--light-gray);
+    line-height: 1.6;
+    font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+}
+
+.cta-button {
+    margin-top: clamp(20px, 5vw, 40px);
+    display: inline-block;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 5vw, 40px);
+    background: linear-gradient(135deg, var(--pink), var(--cherry));
+    color: var(--white);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: clamp(1px, 0.3vw, 2px);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(153, 0, 51, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(153, 0, 51, 0.4);
+}
+
+/* Mobile animation and responsive styles */
+@media (max-width: 768px) {
+    .floating-object {
+        animation: float 15s infinite ease-in-out;
+    }
+    
+    .floating-object:nth-child(2n) {
+        animation-duration: 18s;
+        animation-delay: 1s;
+    }
+    
+    .floating-object:nth-child(3n) {
+        animation-duration: 20s;
+        animation-delay: 2s;
+    }
+    
+    .floating-object:nth-child(4n) {
+        animation-duration: 22s;
+        animation-delay: 3s;
+    }
+    
+    .highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floating-object {
+        animation: none;
+    }
+    
+    .mission-frame::before {
+        animation: none;
+    }
+    
+    .mission-title {
+        animation: none;
+    }
+}

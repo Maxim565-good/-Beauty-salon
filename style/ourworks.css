@@ -1,0 +1,169 @@
+/* Добавляем стиль для скрытых элементов */
+.gallery-link.hidden {
+  display: none;
+}
+
+/* Основные стили галереи */
+.ourworks {
+width: 100%;
+padding-top: 100px;
+padding-bottom: 100px;
+box-sizing: border-box;
+display: block;
+margin: 0 auto;
+}
+
+.ourworks-title {
+font-size: 36px;
+font-weight: 700;
+text-align: center;
+margin: 40px 0 30px;
+color: var(--cherry);
+position: relative;
+font-family: 'Montserrat', sans-serif;
+letter-spacing: 1px;
+text-transform: uppercase;
+}
+
+.ourworks-title:after {
+content: '';
+display: block;
+width: 80px;
+height: 4px;
+background: linear-gradient(90deg, var(--cherry), var(--pink));
+margin: 15px auto 0;
+border-radius: 2px;
+}
+
+.ourworks-title:before {
+content: '';
+display: block;
+width: 15px;
+height: 15px;
+background-color: var(--openpink);
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%) rotate(45deg);
+z-index: -1;
+}
+
+.gallery {
+-moz-column-gap: 0;
+column-gap: 0;
+}
+
+@media (min-width: 480px) {
+.gallery {
+  -moz-column-count: 2;
+  column-count: 2;
+}
+}
+
+@media (min-width: 1260px) {
+.gallery {
+  -moz-column-count: 3;
+  column-count: 3;
+}
+}
+
+.gallery-image {
+position: relative;
+margin: 0;
+padding: 0;
+}
+
+.gallery-image:before, .gallery-image:after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+border: 16px solid rgba(0, 0, 0, 0.1);
+transition: all 0.2s;
+will-change: border;
+}
+
+.gallery-image:after {
+border-width: 0;
+}
+
+.gallery-image img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+/* Стили для подписей к фотографиям */
+.gallery-image figcaption {
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+background-color: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 10px 15px;
+text-align: center;
+font-size: 14px;
+text-transform: uppercase;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+/* Анимация подписи при наведении */
+.gallery-link:hover .gallery-image figcaption {
+background-color: var(--cherry, #d81b60);
+}
+
+/* Стили для кнопки "Больше работ" */
+.show-more-container {
+text-align: center;
+margin-top: 40px;
+}
+
+.show-more-btn {
+background: linear-gradient(90deg, var(--cherry, #d81b60), var(--pink, #f06292));
+color: white;
+border: none;
+padding: 12px 30px;
+font-size: 16px;
+font-weight: 600;
+border-radius: 30px;
+cursor: pointer;
+transition: all 0.3s ease;
+font-family: 'Montserrat', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.show-more-btn:hover {
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.show-more-btn:active {
+transform: translateY(0);
+}
+
+.show-more-btn.hidden {
+display: none;
+}
+
+/* Чтобы избежать конфликта с оригинальным оформлением подписей */
+.mfp-with-zoom .mfp-title, 
+.touch .gallery-image figcaption, 
+html:not(.touch) .gallery-image figcaption {
+position: absolute;
+color: white;
+transition: all 0.2s ease;
+font-weight: 600;
+text-align: center;
+box-sizing: border-box;
+bottom: 0;
+top: auto;
+left: 0;
+right: 0;
+transform: none;
+}

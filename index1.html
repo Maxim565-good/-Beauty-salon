@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty salon "ESTET"</title>
+<link rel="stylesheet" href="style\style.css">
+<link rel="stylesheet" href="style\button.css">
+<link rel="stylesheet" href="style\price.css">
+<link rel="stylesheet" href="style\ourworks.css">
+<link rel="stylesheet" href="style\about.css">
+<link rel="stylesheet" href="style\certificat.css">
+<link rel="stylesheet" href="style\languag.css">
+<link rel="stylesheet" href="style\massage.css">
+<link rel="stylesheet" href="style\courses.css">
+<link rel="stylesheet" href="style\vacancy.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="img\photo_2025-02-27_17-34-38.png">
+
+</head>
+<body>
+  <div class="booking-button" id="bookingButton">
+    <div class="booking-button-text">Programare<br>online</div>
+</div>
+
+<!-- Затемнение фона -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Боковая панель для записи -->
+<div class="booking-sidebar" id="bookingSidebar">
+    <div class="sidebar-header">
+        <h2 class="sidebar-title">Programare online</h2>
+        <button class="close-sidebar" id="closeSidebar">&times;</button>
+    </div>
+    
+    <!-- Контактная информация -->
+    <div class="contact-info">
+        <h3 class="contact-title">Scrie-ne aici</h3>
+        <div class="contact-item">
+            <i class="contact-icon phone-icon"></i>
+            <a href="tel:+71234567890">+373 067-676-565</a>
+        </div>
+        <div class="contact-item">
+            <i class="contact-icon email-icon"></i>
+            <a href="mailto:info@example.com"> oxy.estetique@gmail.com</a>
+        </div>
+       
+        <div class="social-icons">
+            <a href="https://vk.com" target="_blank" class="social-icon vk" title="VKontakte"></a>
+            <a href="https://www.instagram.com/estet_cahul/" target="_blank" class="social-icon instagram" title="Instagram"></a>
+            <a href="https://www.facebook.com/estetsaloncahul/" target="_blank" class="social-icon facebook" title="Facebook"></a>
+            <a href="https://t.me" target="_blank" class="social-icon telegram" title="Telegram"></a>
+            <a href="https://whatsapp.com" target="_blank" class="social-icon whatsapp" title="WhatsApp"></a>
+        </div>
+    </div>
+    <div class="contact-item">
+      <i class=""></i>
+      <a href="">  <i>🕒</i>
+        <p>Lun-Sâm: 10:00 - 20:00<br>Dum: 10:00 - 18:00</p></a>
+  </div>
+    <form id="bookingForm">
+
+      
+        
+       
+        
+       
+        
+       
+        
+       
+        
+        
+    </form>
+  </div>
+  
+  <header>
+      <div class="container">
+          <nav class="navbar">
+              <div class="logo">
+                  <img src="img\photo_2025-02-27_17-34-38.png" alt="Estet" class="logo-img logo-hidden">
+              </div>
+          </nav>
+  
+          <ul class="nav-links">
+              <li><a href="#home" class="nav-button">Acasă</a></li>
+              <li><a href="#price" class="nav-button">Listă de prețuri</a></li>
+              <li><a href="#courses" class="nav-button">Instruire</a></li>
+              <li><a href="#contact" class="nav-button">Contacte</a></li>
+              <li><a href="#gift" class="nav-button">Certificat</a></li>
+              <li><a href="#careers" class="nav-button">Posturi vacante</a></li>
+              <li class="language-dropdown">
+                  <button type="button" class="language-btn">RO<i class="fa fa-caret-down"></i></button>
+                  <div class="language-content">
+                      <a href="">Română</a>
+                      <a href="index.html">Русский</a>
+                  </div>
+              </li>
+              <li><a href="" class="phone-button">067676565</a></li>
+          </ul>
+  
+          <div class="hamburger" onclick="toggleMenu()">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+          </div>
+      </div>
+  </header>
+  
+  <!-- hero  -->
+  <section id="home" class="hero">
+      <div class="bg-effect"></div>
+      <div class="container">
+          <div class="hero-content">
+              <h1 class="animate-text">FRUMUSEȚEA TA <span class="colored-text">STILUL NOSTRU</span></h1>
+              <p class="animate-text">(SALON DE FRUMUSEȚE PENTRU FETE CU O PERSONALITATE STRĂLUCITOARE)</p>
+              <a href="#contact"  class="btn-appointment animate-btn">Programează-te</a>
+          </div>
+          <div class="hero-images">
+              <div class="image-container main-image"></div>
+              <div class="image-container secondary-image"></div>
+          </div>
+      </div>
+  </section>
+  <!-- end of hero -->
+  
+  <section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Despre salonul nostru</h2>
+                <p>Salonul de frumusețe "ESTET" este locul unde fiecare client beneficiază de o abordare individuală și servicii de înaltă calitate. Activăm din anul 2014 și în acest timp am câștigat încrederea și recunoașterea a mii de clienți.</p>
+                <p>Meșterii noștri sunt profesioniști cu multă experiență, care își perfecționează constant abilitățile, studiază tehnici noi și urmăresc ultimele tendințe din industria frumuseții.</p>
+                <p>Utilizăm doar produse cosmetice premium verificate, care oferă rezultate excelente și sunt sigure pentru sănătatea dumneavoastră.</p>
+                <a href="#contact" class="btn">Contactează-ne</a>
+            </div>
+            <div class="about-img">
+                <img src="img\photo_2025-03-12_20-22-50.jpg" alt="Despre salonul nostru">
+            </div>
+        </div>
+    </div>
+  </section>
+  
+
+  <section id="mission" class="mission-section">
+
+    <div class="floating-objects-background"></div>
+  
+    <div class="mission-container">
+        <div class="mission-frame">
+            <h2 class="mission-title">Misiunea Noastră</h2>
+            <p class="mission-subtitle"></p>
+  
+            <div class="highlights">
+                <div class="highlight-item">
+                    <h3 class="highlight-title">Calitate</h3>
+                    <p class="highlight-description">Asigurăm cele mai înalte standarde în tot ceea ce facem.</p>
+                </div>
+                <div class="highlight-item">
+                    <h3 class="highlight-title">Inovație</h3>
+                    <p class="highlight-description">Ne dezvoltăm constant și perfecționăm abordările noastre.</p>
+                </div>
+                <div class="highlight-item">
+                    <h3 class="highlight-title">Comunitate</h3>
+                    <p class="highlight-description">Creăm relații de lungă durată, benefice pentru toți.</p>
+                </div>
+            </div>
+  
+            <a href="#works" class="cta-button">Află Mai Multe</a>
+        </div>
+    </div>
+  </section>
+  
+
+ <!-- end_of_about -->
+
+
+
+
+<!-- Listă de Prețuri -->
+<div class="price-list" id="price">
+  <div class="price-header">(LISTĂ DE PREȚURI)</div>
+
+  <div class="price-category">
+      <div class="category-header">
+          manichiură și pedichiură
+          <span class="arrow"></span>
+      </div>
+      <div class="category-content">
+          <div class="price-item">
+              <div class="price-name">Procedură completă (manichiură + îndepărtare gel, aplicare gel-lac)</div>
+              <div class="price-cost">270 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Manichiură igienică</div>
+              <div class="price-cost">100–120 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Pedichiură igienică</div>
+              <div class="price-cost">200 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Pedichiură cu curățare degete</div>
+              <div class="price-cost">100 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Pedichiură cu gel-lac</div>
+              <div class="price-cost">270 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii unghii cu gel (până la 3 mm)</div>
+              <div class="price-cost">350 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii unghii cu gel (peste 3 mm)</div>
+              <div class="price-cost">400 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Corecție</div>
+              <div class="price-cost">300–350 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Îndepărtare gel</div>
+              <div class="price-cost">300–350 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Curățare gel</div>
+              <div class="price-cost">50 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Aplicare gel-lac</div>
+              <div class="price-cost">de la 270 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Aplicare gel</div>
+              <div class="price-cost">de la 300 MDL</div>
+          </div>
+      </div>
+  </div>
+
+  <div class="price-category">
+      <div class="category-header">
+          machiaj
+          <span class="arrow"></span>
+      </div>
+      <div class="category-content">
+          <div class="price-item">
+              <div class="price-name">Corecție sprâncene (ceară)</div>
+              <div class="price-cost">70 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Vopsirea sprâncenelor</div>
+              <div class="price-cost">50–100 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Corecție sprâncene (vopsire + formă)</div>
+              <div class="price-cost">150 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Machiaj de seară</div>
+              <div class="price-cost">350–400 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii gene 1D</div>
+              <div class="price-cost">200 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii gene 3D</div>
+              <div class="price-cost">300 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Corecție sprâncene (pensetă)</div>
+              <div class="price-cost">50 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Laminare sprâncene</div>
+              <div class="price-cost">400 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Laminare gene</div>
+              <div class="price-cost">400 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Machiaj de mireasă</div>
+              <div class="price-cost">500 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii gene 2D</div>
+              <div class="price-cost">250 MDL</div>
+          </div>
+          <div class="price-item">
+              <div class="price-name">Extensii gene 4D</div>
+              <div class="price-cost">350 MDL</div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    
+<div class="price-category">
+  <div class="category-header">
+    Servicii de frizerie (bărbați)
+    <span class="arrow"></span>
+  </div>
+  <div class="category-content">
+
+    <div class="price-item">
+      <div class="price-name">Tuns</div>
+      <div class="price-cost">100 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Spălare păr</div>
+      <div class="price-cost">20 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Stilizare păr</div>
+      <div class="price-cost">50 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Barbă</div>
+      <div class="price-cost">50 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Tuns model</div>
+      <div class="price-cost">150 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Vopsire</div>
+      <div class="price-cost">200 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Desen</div>
+      <div class="price-cost">100 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Linie</div>
+      <div class="price-cost">50 MDL</div>
+    </div>
+  </div>
+</div>
+
+
+<div class="price-category">
+  <div class="category-header">
+    Servicii de frizerie (femei)
+    <span class="arrow"></span>
+  </div>
+  <div class="category-content">
+
+    <div class="price-item">
+      <div class="price-name">Tăierea bretonului</div>
+      <div class="price-cost">50 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Tuns</div>
+      <div class="price-cost">100 / 150 / 200 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Spălare păr (femei)</div>
+      <div class="price-cost">20 / 30 / 40 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Coafare</div>
+      <div class="price-cost">100 / 150 / 200 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Coafare termică</div>
+      <div class="price-cost">150 / 200 / 250 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Coafură de sărbătoare</div>
+      <div class="price-cost">300 / 350 / 400 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Coafură de sărbătoare (pentru copii)</div>
+      <div class="price-cost">250 / 300 / 350 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Coafură de mireasă</div>
+      <div class="price-cost">600 / 700 / 800 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Codițe (în coafură)</div>
+      <div class="price-cost">100 / 150 / 200 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Vopsire (o singură culoare)</div>
+      <div class="price-cost">120 / 150 / 225 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Decapaj (cu decolorare)</div>
+      <div class="price-cost">180 / 255 / 300 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Vopsire în mai multe culori</div>
+      <div class="price-cost">450 / 600 / 750 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Rădăcini</div>
+      <div class="price-cost">600 / 900 / 1500 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Tuns + vopsire</div>
+      <div class="price-cost">300 / 600 / 900 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Tuns cu aer</div>
+      <div class="price-cost">900 / 1500 / 2250 MDL</div>
+    </div>
+  </div>
+</div>
+
+<div class="price-category">
+  <div class="category-header">
+    Îngrijire / proceduri
+    <span class="arrow"></span>
+  </div>
+  <div class="category-content">
+
+    <div class="price-item">
+      <div class="price-name">Keratină</div>
+      <div class="price-cost">1000 / 1200 / 1500 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Botox H-Brash</div>
+      <div class="price-cost">1000 / 1200 / 1500 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Bixyplastie</div>
+      <div class="price-cost">1000 / 1200 / 1500 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Nanoplastie</div>
+      <div class="price-cost">1000 / 1200 / 1500 MDL</div>
+    </div>
+
+    <div class="price-item">
+      <div class="price-name">Colagen capilar</div>
+      <div class="price-cost">1000 / 1200 / 1500 MDL</div>
+    </div>
+
+  </div>
+</div>
+
+      
+    
+   
+<div class="price-category">
+  <div class="category-header">
+    Cosmetologie și masaj
+    <span class="arrow"></span>
+  </div>
+  <div class="category-content">
+    <div class="price-item">
+      <div class="price-name">Îndepărtarea mustății</div>
+      <div class="price-cost">50 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare parțială a brațelor</div>
+      <div class="price-cost">100 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare facială</div>
+      <div class="price-cost">130–150 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare zona bikini (parțială)</div>
+      <div class="price-cost">150 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare parțială a picioarelor</div>
+      <div class="price-cost">120 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare facială (bărbați)</div>
+      <div class="price-cost">200 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Mască (obișnuită)</div>
+      <div class="price-cost">100 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Masaj facial</div>
+      <div class="price-cost">200 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Masaj clasic general (corp)</div>
+      <div class="price-cost">350 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Curățare facială (manuală + ultrasunete)</div>
+      <div class="price-cost">450 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare axile</div>
+      <div class="price-cost">70 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare completă a brațelor</div>
+      <div class="price-cost">150 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Perforarea urechilor</div>
+      <div class="price-cost">150 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare zona bikini (totală)</div>
+      <div class="price-cost">250 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Depilare completă a picioarelor</div>
+      <div class="price-cost">200 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Mască cu alge / nămol</div>
+      <div class="price-cost">150 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Peeling</div>
+      <div class="price-cost">450–500 MDL</div>
+    </div>
+    <div class="price-item">
+      <div class="price-name">Masaj spate</div>
+      <div class="price-cost">200 MDL</div>
+    </div>
+  </div>
+</div>
+
+    
+<!-- /прaйс -->
+
+<!-- massaje -->
+<section class="massage-section">
+
+  <div class="bubbles-container" id="bubbles-container"></div>
+  
+  <div class="section-title" id="section-title">
+      <h2>Masaj</h2>
+  </div>
+  
+  <p class="massage-intro" id="massage-intro">
+      Masajul nostru este o combinație magică între tehnici străvechi și metode moderne, care ajută corpul să se relaxeze și mintea să-și găsească armonia. Oferim o abordare individuală fiecărui client, pentru a vă dărui senzații de neuitat și o regenerare completă.
+  </p>
+  
+  <div class="photo-gallery">
+      <div class="photo-item photo-1" id="photo-1">
+          <img src="img\massaj\photo_2_2025-04-10_13-54-07.jpg" alt="Masaj spate" />
+          <div class="photo-caption">Armonia corpului și sufletului</div>
+      </div>
+      <div class="photo-item photo-2" id="photo-2">
+          <img src="img\massaj\photo_1_2025-04-10_13-54-07.jpg" alt="Masaj gât" />
+          <div class="photo-caption">Eliberarea tensiunii</div>
+      </div>
+      <div class="photo-item photo-3" id="photo-3">
+          <img src="img\massaj\photo_7_2025-04-10_13-54-07.jpg" alt="Relaxare" />
+          <div class="photo-caption">Relaxare profundă</div>
+      </div>
+      <div class="photo-item photo-4" id="photo-4">
+          <img src="img\massaj\photo_5_2025-04-10_13-54-07.jpg" alt="Aromaterapie" />
+          <div class="photo-caption">Aromaterapie</div>
+      </div>
+      <div class="photo-item photo-5" id="photo-5">
+          <img src="img\massaj\photo_8_2025-04-10_13-54-07.jpg" alt="Cabinet de masaj" />
+          <div class="photo-caption">Atmosferă confortabilă</div>
+      </div>
+  </div>
+  
+  <div class="cta-container" id="cta-container">
+      
+  </div>
+</section>
+
+ <!--/massaje -->
+
+<!-- наши работы -->
+<section id="works" class="ourworks">
+  <h2 class="ourworks-title">Lucrările noastre</h2>
+  <article class='gallery' id="gallery">
+      <!-- Fotografii vizibile inițial (primele 6) -->
+      <a class='gallery-link' href='img\strijki\photo_1_2025-04-10_13-50-30.jpg'>
+        <figure class='gallery-image'>
+          <img height='1400' src='img\strijki\photo_1_2025-04-10_13-50-30.jpg' width='1600'>
+          <figcaption>Tunsori pentru femei</figcaption>
+        </figure>
+      </a>
+     
+      <a class='gallery-link' href='img\Mujskiestrijki\photo_3_2025-04-10_13-52-24.jpg'>
+        <figure class='gallery-image'>
+          <img height='1400' src='img\Mujskiestrijki\photo_3_2025-04-10_13-52-24.jpg' width='1000'>
+          <figcaption>Tunsori pentru bărbați</figcaption>
+        </figure>
+      </a>
+      <a class='gallery-link' href='img\manichiur.pedichiur\photo_5_2025-04-10_13-56-41.jpg'>
+          <figure class='gallery-image'>
+            <img height='1600' src='img\manichiur.pedichiur\photo_5_2025-04-10_13-56-41.jpg' width='1400'>
+            <figcaption>Manichiură</figcaption>
+          </figure>
+        </a>
+      <a class='gallery-link' href='img\strijki\photo_5_2025-04-10_13-49-02.jpg'>
+        <figure class='gallery-image'>
+          <img height='1000' src='img\strijki\photo_5_2025-04-10_13-49-02.jpg' width='1400'>
+          <figcaption>Tunsori pentru femei</figcaption>
+        </figure>
+      </a>
+      
+      <a class='gallery-link' href='img\Mujskiestrijki\photo_4_2025-04-10_13-52-24.jpg'>
+        <figure class='gallery-image'>
+          <img height='1000' src='img\Mujskiestrijki\photo_4_2025-04-10_13-52-24.jpg' width='1400'>
+          <figcaption>Tunsori pentru bărbați</figcaption>
+        </figure>
+      </a>
+      <a class='gallery-link hidden' href='img\makeupp\photo_4_2025-04-10_13-55-57.jpg'>
+        <figure class='gallery-image'>
+          <img height='1400' src='img\makeupp\photo_4_2025-04-10_13-55-57.jpg' width='1400'>
+          <figcaption>Machiaj</figcaption>
+        </figure>
+      </a>
+      <a class='gallery-link' href='img\strijki\33.jpg'>
+        <figure class='gallery-image'>
+          <img height='1600' src='img\strijki\33.jpg' width='1200'>
+          <figcaption>Tunsori pentru femei</figcaption>
+        </figure>
+      </a>
+
+        
+        <!-- Fotografii ascunse (restul) -->
+        <a class='gallery-link hidden' href='img\strijki\photo_2_2025-04-10_13-50-30.jpg'>
+          <figure class='gallery-image'>
+            <img height='1000' src='img\strijki\photo_2_2025-04-10_13-50-30.jpg' width='1200'>
+            <figcaption>Coafuri pentru femei</figcaption>
+          </figure>
+        </a>
+        <a class='gallery-link hidden' href='img\piercing\photo_1_2025-04-10_13-53-16.jpg'>
+          <figure class='gallery-image'>
+            <img height='1400' src='img\piercing\photo_1_2025-04-10_13-53-16.jpg' width='1400'>
+            <figcaption>Piercing</figcaption>
+          </figure>
+        </a>
+        <a class='gallery-link hidden' href='img\piercing\photo_2_2025-04-10_13-53-16.jpg'>
+            <figure class='gallery-image'>
+              <img height='1400' src='img\piercing\photo_2_2025-04-10_13-53-16.jpg' width='1400'>
+              <figcaption>Piercing</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\manichiur.pedichiur\photo_7_2025-04-10_13-56-41.jpg'>
+            <figure class='gallery-image'>
+              <img height='1400' src='img\manichiur.pedichiur\photo_7_2025-04-10_13-56-41.jpg' width='1400'>
+              <figcaption>Manichiură</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\strijki\photo_3_2025-04-10_13-50-30.jpg'>
+            <figure class='gallery-image'>
+              <img height='1400' src='img\strijki\photo_3_2025-04-10_13-50-30.jpg' width='1600'>
+              <figcaption>Coafuri pentru femei</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\manichiur.pedichiur\photo_17_2025-04-10_13-56-41.jpg'>
+            <figure class='gallery-image'>
+              <img height='1000' src='img\manichiur.pedichiur\photo_17_2025-04-10_13-56-41.jpg' width='1400'>
+              <figcaption>Manichiură</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\manichiur.pedichiur\photo_15_2025-04-10_13-56-41.jpg'>
+            <figure class='gallery-image'>
+              <img height='1000' src='img\manichiur.pedichiur\photo_15_2025-04-10_13-56-41.jpg' width='1400'>
+              <figcaption>Pedichiură</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\manichiur.pedichiur\photo_18_2025-04-10_13-56-41.jpg'>
+            <figure class='gallery-image'>
+              <img height='1000' src='img\manichiur.pedichiur\photo_18_2025-04-10_13-56-41.jpg' width='1200'>
+              <figcaption>Pedichiură</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\brovi.laminirovanie\12.jpg'>
+            <figure class='gallery-image'>
+              <img height='1400' src='img\brovi.laminirovanie\12.jpg' width='1400'>
+              <figcaption>Laminare sprâncene</figcaption>
+            </figure>
+          </a>
+          <a class='gallery-link hidden' href='img\brovi.laminirovanie\photo_6_2025-04-10_13-55-15.jpg'>
+              <figure class='gallery-image'>
+                <img height='1400' src='img\brovi.laminirovanie\photo_6_2025-04-10_13-55-15.jpg' width='1400'>
+                <figcaption>Laminare sprâncene</figcaption>
+              </figure>
+            </a>
+            <a class='gallery-link hidden' href='img\vosk\photo_4_2025-04-10_13-55-35.jpg'>
+              <figure class='gallery-image'>
+                <img height='1400' src='img\vosk\photo_4_2025-04-10_13-55-35.jpg' width='1400'>
+                <figcaption>Ceară</figcaption>
+              </figure>
+            </a>
+            <a class='gallery-link hidden' href='img\mehendi\photo_2_2025-04-10_13-54-37.jpg'>
+                <figure class='gallery-image'>
+                  <img height='1400' src='img\mehendi\photo_2_2025-04-10_13-54-37.jpg' width='1400'>
+                  <figcaption>Mehendi</figcaption>
+                </figure>
+              </a>
+              <a class='gallery-link hidden' href='img\photo_2025-02-22_22-48-32.jpg'>
+                  <figure class='gallery-image'>
+                    <img height='1400' src='img\photo_2025-02-22_22-48-32.jpg' width='1400'>
+                    <figcaption>Mehendi</figcaption>
+                  </figure>
+                </a>
+
+                <a class='gallery-link hidden' href='img\vosk\photo_6_2025-04-10_13-55-35.jpg'>
+                    <figure class='gallery-image'>
+                      <img height='1400' src='img\vosk\photo_6_2025-04-10_13-55-35.jpg' width='1400'>
+                      <figcaption>Ceară</figcaption>
+                    </figure>
+                  </a>
+                  <a class='gallery-link hidden' href='img\makeupp\photo_1_2025-04-10_13-55-57.jpg'>
+                      <figure class='gallery-image'>
+                        <img height='1400' src='img\makeupp\photo_1_2025-04-10_13-55-57.jpg' width='1400'>
+                        <figcaption>Machiaj</figcaption>
+                      </figure>
+                    </a>
+                    
+                
+    </article>
+    <h2 class="ourworks-title">Lucrările noastre</h2>
+    <!-- Butonul "Vezi mai multe" -->
+    <div class="show-more-container">
+        <button id="show-more-btn" class="show-more-btn">Mai multe lucrări</button>
+    </div>
+</section>
+
+  
+ <!-- /наши работы -->
+
+<!-- Certificat cadou -->
+<section id="gift" class="gift-section">
+  <h2 class="section-title">Certificat cadou</h2>
+  <div class="gift-card-container">
+    <div class="gift-card">
+      <div class="gift-card-bg"></div>
+      <div class="gift-card-decor"></div>
+      <div class="gift-card-decor"></div>
+      <div class="gift-card-content">
+        <div>
+          <div class="gift-card-title"> ESTET</div>
+          <div class="gift-card-subtitle">Salon de frumusețe</div>
+          <div class="gift-card-description">Oferiți frumusețe și relaxare cu serviciile noastre premium, inclusiv coafuri, machiaj, aranjarea sprâncenelor și manichiură.</div>
+        </div>
+        <button class="gift-card-button" onclick="openModal()">PRIMEȘTE</button>
+      </div>
+      <div class="ribbon">
+        <span class="ribbon-content">CERTIFICAT</span>
+      </div>
+    </div>
+  </div>
+</section>
+   
+<!-- Modal -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal-container">
+    <div class="blur-bg"></div>
+    <button class="modal-close" onclick="closeModal()">×</button>
+    <h3 class="modal-title">Contactați-ne pentru a obține certificatul cadou</h3>
+    <div class="modal-content">
+      <p style="text-align: center; margin-bottom: 20px;">Vă rugăm să ne contactați prin rețelele sociale sau să ne sunați pentru a achiziționa certificatul cadou.</p>
+      
+      <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="social-link instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://wa.me/75551234567" target="_blank" class="social-link whatsapp">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+        </div>
+      
+      <div id="gift" class="contact-info">
+        <p><strong>Telefon:</strong> 0299 32862</p>
+        <p><strong>Telefon:</strong>  067-676-565</p>
+        <p><strong>Email:</strong> oxy.estetique@gmail.com</p>
+      </div>
+    </div>
+      
+    <div class="salon-photos">
+      <div class="salon-photo">
+        <img src="img\certificat\44.png" alt="Interiorul Salonului Estet" />
+      </div>
+      <div class="salon-photo">
+        <img src="img\certificat\photo_2_2025-03-23_17-22-25.jpg" alt="Serviciile Salonului Estet" />
+      </div>
+    </div>
+  </div>
+</div>
+
+                          
+ <!-- /сертификат -->
+ 
+ <!-- курсы -->
+ <div id="courses" class="mk-body">
+  <!-- Floating bubbles -->
+  <div class="mk-bg-effect"></div>
+  <div class="mk-bubble" style="width: 150px; height: 150px; top: 10%; left: 5%; animation-delay: 0s;"></div>
+  <div class="mk-bubble" style="width: 80px; height: 80px; top: 30%; right: 10%; animation-delay: 2s;"></div>
+  <div class="mk-bubble" style="width: 120px; height: 120px; bottom: 20%; left: 15%; animation-delay: 4s;"></div>
+  <div class="mk-bubble" style="width: 60px; height: 60px; bottom: 30%; right: 20%; animation-delay: 6s;"></div>
+  <div class="mk-bubble" style="width: 100px; height: 100px; top: 60%; left: 50%; animation-delay: 8s;"></div>
+  <div class="mk-bubble" style="width: 70px; height: 70px; top: 80%; right: 40%; animation-delay: 10s;"></div>
+
+  <div class="mk-container">
+      <h1 class="mk-heading">Cursurile noastre</h1>
+      
+      <div class="mk-courses-container">
+          <!-- Cursul 1 -->
+          <div class="mk-course">
+              <div class="mk-course-header" onclick="toggleMkCourse(this)">
+                  <h2 class="mk-course-title">Cursul "Machiaj pentru tine"</h2>
+                  <div class="mk-course-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="mk-course-content">
+                  <div class="mk-course-content-inner">
+                      <div class="mk-course-image">
+                          <img src="img\1.1.jpg" alt="Cursul 'Machiaj pentru tine'">
+                      </div>
+                      <div class="mk-course-details">
+                          <div class="mk-course-description">
+                              <p>La acest curs veți învăța:
+                                ✨ Cum să evidențiați trăsăturile proprii ale feței 😊
+                                🎨 Cum să creați machiaje personalizate pentru fiecare zi 💄
+                                🌟 Ce vor fi perfecte doar pentru dumneavoastră 💁‍♀️💕</p>
+                          </div>
+                          
+                          <div class="mk-course-features">
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-clock mk-feature-icon"></i>
+                                  <span>Durata: 4 săptămâni</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-user-graduate mk-feature-icon"></i>
+                                  <span>Nivel: Începător</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-users mk-feature-icon"></i>
+                                  <span>Maxim de cursanți: 10</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-certificate mk-feature-icon"></i>
+                                  <span>Certificat: Da</span>
+                              </div>
+                          </div>
+                          
+                          <div class="mk-course-program">
+                              <h3>Programul cursului:</h3>
+                              <ul class="mk-program-list">
+                                  <li>Principiile fundamentale ale machiajului și cromaticii</li>
+                                  <li>Selecția cosmeticii pentru diferite tipuri de piele</li>
+                                  <li>Tehnica aplicării fondului de ten</li>
+                                  <li>Corectarea feței și conturarea</li>
+                              </ul>
+                          </div>
+                         
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Cursul 2 -->
+          <div class="mk-course">
+              <div class="mk-course-header" onclick="toggleMkCourse(this)">
+                  <h2 class="mk-course-title">Cursul "Expert în sprâncene"</h2>
+                  <div class="mk-course-toggle"><i class="fas fa-plus"></i></div>
+              </div>
+              <div class="mk-course-content">
+                  <div class="mk-course-content-inner">
+                      <div class="mk-course-image">
+                          <img src="img\top-view-female-clinician-doing-eyebrow-treatment-woman.jpg" alt="Cursul 'Expert în sprâncene'">
+                      </div>
+                      <div class="mk-course-details">
+                          <div class="mk-course-description">
+                              <p>Devino expert în modelarea sprâncenelor! La acest curs vei învăța tehnici profesionale de modelare, vopsire și corectare a sprâncenelor. Vei învăța cum să alegi forma sprâncenelor în funcție de tipul feței, să lucrezi cu diferite produse și instrumente, dar și să descoperi tendințele actuale din domeniul sprâncenelor.</p>
+                          </div>
+                          
+                          <div class="mk-course-features">
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-clock mk-feature-icon"></i>
+                                  <span>Durata: 3 săptămâni</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-user-graduate mk-feature-icon"></i>
+                                  <span>Nivel: Intermediar</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-users mk-feature-icon"></i>
+                                  <span>Maxim de cursanți: 8</span>
+                              </div>
+                              <div class="mk-feature-item">
+                                  <i class="fas fa-certificate mk-feature-icon"></i>
+                                  <span>Certificat: Da</span>
+                              </div>
+                          </div>
+                          
+                          <div class="mk-course-program">
+                              <h3>Programul cursului:</h3>
+                              <ul class="mk-program-list">
+                                  <li>Anatomia și structura sprâncenelor</li>
+                                  <li>Alegerea formei sprâncenelor în funcție de tipul feței</li>
+                                  <li>Tehnici de corectare a sprâncenelor cu penseta și ața</li>
+                                  <li>Vopsirea sprâncenelor cu henne și vopsea</li>
+                                  <li>Lucrul cu ceară și pastă de zahăr</li>
+                                  <li>Tehnici de machiaj pentru sprâncene (creion, fard, ruj, gel)</li>
+                                  <li>Laminarea sprâncenelor</li>
+                              </ul>
+                          </div>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <!-- Cursul 3 -->
+          <div class="mk-course">
+            <div class="mk-course-header" onclick="toggleMkCourse(this)">
+                <h2 class="mk-course-title">Cursul "Vizajist profesionist"</h2>
+                <div class="mk-course-toggle"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="mk-course-content">
+                <div class="mk-course-content-inner">
+                    <div class="mk-course-image">
+                        <img src="img\young-woman-applying-makeup-studio.jpg" alt="Cursul 'Vizajist profesionist'">
+                    </div>
+                    <div class="mk-course-details">
+                        <div class="mk-course-description">
+                            <p>Curs complet pentru vizajisti începători, care vă va oferi toate cunoștințele și abilitățile necesare pentru o carieră de succes. Veți învăța toate tipurile de machiaj – de la machiajul de zi până la cel de nuntă și machiajul de fantezie, precum și cum să lucrați cu clienții, să construiți un portofoliu și să vă promovați serviciile.</p>
+                        </div>
+                        
+                        <div class="mk-course-features">
+                            <div class="mk-feature-item">
+                                <i class="fas fa-clock mk-feature-icon"></i>
+                                <span>Durata: 8 săptămâni</span>
+                            </div>
+                            <div class="mk-feature-item">
+                                <i class="fas fa-user-graduate mk-feature-icon"></i>
+                                <span>Nivel: Avansat</span>
+                            </div>
+                            <div class="mk-feature-item">
+                                <i class="fas fa-users mk-feature-icon"></i>
+                                <span>Maxim de cursanți: 6</span>
+                            </div>
+                            <div class="mk-feature-item">
+                                <i class="fas fa-certificate mk-feature-icon"></i>
+                                <span>Certificat: Da</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mk-course-program">
+                            <h3>Programul cursului:</h3>
+                            <ul class="mk-program-list">
+                                <li>Bazele lucrului cu cosmetice profesionale</li>
+                                <li>Cromatica în machiaj</li>
+                                <li>Arhitectura feței și corectarea diferitelor tipuri de aspect</li>
+                                <li>Tehnici de aplicare a fondului de ten</li>
+                                <li>Toate tipurile de machiaj pentru ochi (de zi, de seară, smoky eyes)</li>
+                                <li>Machiaj pentru sesiuni foto</li>
+                                <li>Machiaj de nuntă</li>
+                                <li>Machiaj pentru vârsta a doua</li>
+                                <li>Machiaj de fantezie și pentru podium</li>
+                                <li>Lucrul cu gene false și efecte speciale</li>
+                                <li>Crearea unui portofoliu</li>
+                            </ul>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+     
+
+<!-- /курсы -->
+
+<!-- Вакансии -->
+
+<div id="careers" class="vacancies-container">
+  <h2 class="section-title">Alăturați-vă echipei noastre</h2>
+  
+  <div class="filters">
+      <button class="filter-btn active" data-filter="all">Toate locurile de muncă</button>
+      <button class="filter-btn" data-filter="stylist">Frizeri</button>
+      <button class="filter-btn" data-filter="nails">Stiliști unghii</button>
+      <button class="filter-btn" data-filter="massage">Masori</button>
+      <button class="filter-btn" data-filter="cosmetolog">Cosmetologi</button>
+  </div>
+  
+  <div class="vacancies-grid">
+      <div class="vacancy-card new-vacancy" data-category="stylist">
+          <div class="vacancy-badge">Nou</div>
+          <h3 class="vacancy-title">Frizer-Stilist</h3>
+          <div class="vacancy-company">
+              <span class="vacancy-icon icon-stylist"></span>
+              Program complet
+          </div>
+        
+          <div class="vacancy-features">
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Procent mare din realizare
+              </div>
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Program flexibil
+              </div>
+          </div>
+          <div class="vacancy-details">
+              <span class="vacancy-tag">Tunsori</span>
+              <span class="vacancy-tag">Vopsire</span>
+              <span class="vacancy-tag">Coafuri</span>
+          </div>
+          <p class="vacancy-description">Căutăm un frizer-stilist talentat pentru echipa noastră prietenoasă. Este necesar să aveți experiență de cel puțin 1 an și dorința de a evolua în profesie.</p>
+          
+      </div>
+      
+      <div class="vacancy-card" data-category="nails">
+          <h3 class="vacancy-title">Mester manichiură și pedichiură</h3>
+          <div class="vacancy-company">
+              <span class="vacancy-icon icon-nails"></span>
+              Program în schimburi
+          </div>
+          
+          <div class="vacancy-features">
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Materiale furnizate de salon
+              </div>
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Instruire în tehnici
+              </div>
+          </div>
+          <div class="vacancy-details">
+              <span class="vacancy-tag">Manichiură</span>
+              <span class="vacancy-tag">Pedichiură</span>
+              <span class="vacancy-tag">Design</span>
+          </div>
+          <p class="vacancy-description">Căutăm un specialist în manichiură și pedichiură cu experiență. Oferim toate materialele necesare și posibilitatea de a învăța noi tehnici.</p>
+         
+      </div>
+      
+      <div class="vacancy-card new-vacancy" data-category="massage">
+          <div class="vacancy-badge">Nou</div>
+          <h3 class="vacancy-title">Masor</h3>
+          <div class="vacancy-company">
+              <span class="vacancy-icon icon-massage"></span>
+              Program flexibil
+          </div>
+          
+          <div class="vacancy-features">
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Se acceptă clienți proprii
+              </div>
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Cabinet confortabil
+              </div>
+          </div>
+          <div class="vacancy-details">
+              <span class="vacancy-tag">Clasic</span>
+              <span class="vacancy-tag">Terapeutic</span>
+              <span class="vacancy-tag">SPA</span>
+          </div>
+          <p class="vacancy-description">Căutăm un masor experimentat cu cunoștințe în diverse tehnici de masaj. Este necesară o experiență de cel puțin 2 ani.</p>
+          
+      </div>
+      
+      <div class="vacancy-card" data-category="stylist">
+          <h3 class="vacancy-title">Colorist</h3>
+          <div class="vacancy-company">
+              <span class="vacancy-icon icon-stylist"></span>
+              Program complet
+          </div>
+          
+          <div class="vacancy-features">
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Vopsele premium
+              </div>
+              <div class="vacancy-feature">
+                  <span class="vacancy-feature-icon">✓</span> Instruire în tehnici noi
+              </div>
+          </div>
+          <div class="vacancy-details">
+              <span class="vacancy-tag">Vopsire complexă</span>
+              <span class="vacancy-tag">Airtouch</span>
+              <span class="vacancy-tag">Balayage</span>
+          </div>
+          <p class="vacancy-description">Căutăm un colorist talentat cu cunoștințe în tehnici moderne de vopsire. Oferim un loc de muncă într-un mediu confortabil cu materiale premium.</p>
+         
+      </div>
+      
+      <div class="vacancy-card" data-category="makeup">
+          <h3 class="vacancy-title">Vizajist</h3>
+          <div class="vacancy-company">
+              <span class="vacancy-icon icon-makeup"></span>
+              Program flexibil
+          </div>
+
+         
+          <div class="vacancy-features">
+            <div class="vacancy-feature">
+                <span class="vacancy-feature-icon">✓</span> Cosmetice de clasă premium
+            </div>
+        </div>
+        <div class="vacancy-details">
+            <span class="vacancy-tag">Machiaj de seară</span>
+            <span class="vacancy-tag">Machiaj de nuntă</span>
+            <span class="vacancy-tag">Ședințe foto</span>
+        </div>
+        <p class="vacancy-description">Căutăm un vizajist cu instrumentele proprii și portofoliu de lucrări. Oferim un loc de muncă cu produse cosmetice premium și posibilitatea de a participa la ședințe foto.</p>
+       
+        </div>
+        
+        <div class="vacancy-card" data-category="cosmetolog">
+            <h3 class="vacancy-title">Cosmetolog</h3>
+            <div class="vacancy-company">
+                <span class="vacancy-icon icon-admin"></span>
+                Program 2/2
+            </div>
+        
+            <div class="vacancy-features">
+                <div class="vacancy-feature">
+                    <span class="vacancy-feature-icon">✓</span> Bază de clienți permanenți
+                </div>
+                <div class="vacancy-feature">
+                    <span class="vacancy-feature-icon">✓</span> Instruire și dezvoltare profesională pe cheltuiala salonului
+                </div>
+            </div>
+            <div class="vacancy-details">
+                <span class="vacancy-tag">Lucru cu clienții</span>
+                <span class="vacancy-tag">Gestionarea programărilor</span>
+                <span class="vacancy-tag">Vânzări</span>
+            </div>
+            <p class="vacancy-description">Este necesară experiența de cel puțin 1 an în domeniul cosmeticii. Căutăm o persoană cu o dicție corectă, atentă la detalii, orientată către client, cu dorința de a învăța noi tehnici și metode. Portofoliul de proceduri și certificatele sunt un plus.</p>
+           
+        </div>
+        </div>
+        </div>
+        
+        <div class="decoration decoration-1"></div>
+        <div class="decoration decoration-2"></div>
+        
+<!-- /Вакансии -->
+
+<!-- отзывы -->
+
+<section id="testimonials" class="testimonials">
+  <div class="container">
+      <!-- Titlu într-un bloc separat -->
+      <div class="section-title">
+          <h2>Recenzii ale clienților</h2>
+      </div>
+      
+      <!-- Separare clară între titlu și carduri -->
+      <div class="testimonials-container">
+          <div class="testimonial-grid">
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Mulțumesc angajaților drăguți de la salonul Estet!!! Mâinile de aur ale Tatianei Capraru!! Mulțumesc mult pentru munca depusă 😘🕊️"
+                  </div>
+                  <div class="client-info">
+                      <div>
+                          <div class="client-name">
+                            Marina Soloviov</div>
+                          <div class="client-rating">★★★★★</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Îngrijire superbă pentru față la Estet Cahul!
+
+                      Am mers la Estet Cahul pentru un tratament de îngrijire a feței și rezultatul a fost WOW! 🔥Pielea mea este foarte curată, hidratată și arată mult mai bine."
+                  </div>
+                  <div class="client-info">
+                      <div>
+                          <div class="client-name">Dana Morningstar</div>
+                          <div class="client-rating">★★★★★</div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="testimonial-card">
+                  <div class="testimonial-text">
+                      "Angajații oferă servicii de calitate și sunt mereu cu zâmbetul pe buze!"
+                  </div>
+                  <div class="client-info">
+                      <div>
+                          <div class="client-name">Bianca Zubcov</div>
+                          <div class="client-rating">★★★★★</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- /отзывы -->
+
+
+<section id="contact" class="contact">
+  <div class="container">
+      <div class="section-title">
+          <h2>Contactați-ne</h2>
+      </div>
+      <div class="contact-content">
+          <div class="contact-info">
+              <h2>Datele noastre de contact</h2>
+              <div class="info-item">
+                  <i>📍</i>
+                  <p>str. Republicii, 20/50, Etajul 2, \ Cahul, Moldova</p>
+              </div>
+              <div class="info-item">
+                  <i>📞</i>
+                  <p>+373 067-676-565</p>
+              </div>
+              <div class="info-item">
+                  <i>✉️</i>
+                  <p>oxy.estetique@gmail.com</p>
+              </div>
+              <div class="info-item">
+                  <i>🕒</i>
+                  <p>Lun-Sâm: 10:00 - 20:00<br>Dum: 10:00 - 18:00</p>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+      <div class="footer-content">
+          <div class="footer-column">
+              <h3>Despre salon</h3>
+              <p>Ne străduim să oferim clienților noștri un serviciu excelent și experiențe de neuitat. Frumusețea dumneavoastră este munca noastră!</p>
+          </div>
+          <div class="footer-column">
+              <h3>Linkuri rapide</h3>
+              <ul class="footer-links">
+                  <li><a href="#home">Acasă</a></li>
+                  <li><a href="#price">Servicii</a></li>
+                  <li><a href="#about">Despre noi</a></li>
+                  <li><a href="#testimonials">Recenzii</a></li>
+                  <li><a href="#contact">Contacte</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Ne găsiți pe rețelele sociale</h3>
+              <div class="social-links">
+                  <a href="https://www.facebook.com/estetsaloncahul/" class="social-link">FB</a>
+                  <a href="https://www.instagram.com/estet_cahul/" class="social-link">IG</a>
+                  <a href="https://www.threads.net/@estet_cahul" class="social-link">THR</a>
+              </div>
+          </div>
+      </div>
+      <div class="copyright">
+          <p>&copy; 2025 Salonul de frumusețe "Estet". Toate drepturile rezervate.</p>
+      </div>
+  </div>
+</footer>
+
+
+    <script src="script\script.js"></script>
+    <script src="script\price.js"></script>
+    <script src="script\about.js"></script>
+    <script src="script\certificat.js"></script>
+    <script src="script\ourworks.js"></script>
+    <script src="script\massaje.js"></script>
+    <script src="script\courses.js"></script>
+    <script src="script\vacancy.js"></script>
+   
+   
+
+</body>
+</html>
+
